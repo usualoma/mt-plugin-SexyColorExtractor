@@ -1,0 +1,47 @@
+id: SexyColorExtractor
+name: SexyColorExtractor
+version: 1.00
+description: <__trans phrase="Extract sexy colors from images">
+author_name: <__trans phrase="ToI Inc.">
+author_link: http://tec.toi-planning.net/
+plugin_link: https://github.com/usualoma/mt-plugin-SexyColorExtractor/
+
+l10n_class: SexyColorExtractor::L10N
+
+schema_version: 1.00
+object_types:
+    asset.file:
+        se_bg_rgb: text meta
+        se_bg_hsv: text meta
+        se_fg1_rgb: text meta
+        se_fg1_hsv: text meta
+        se_fg2_rgb: text meta
+        se_fg2_hsv: text meta
+    asset.image:
+        se_bg_rgb: text meta
+        se_bg_hsv: text meta
+        se_fg1_rgb: text meta
+        se_fg1_hsv: text meta
+        se_fg2_rgb: text meta
+        se_fg2_hsv: text meta
+
+settings:
+    number_of_colors:
+        Default: 32
+    default_format:
+        Default: rgb(%d, %d, %d)
+    fg1_hue_diff:
+        Default: 120
+    fg1_brightness_diff:
+        Default: 0.375
+    min_ratio:
+        Default: 0.001
+
+callbacks:
+    MT::Asset::Image::pre_save: $SexyColorExtractor::SexyColorExtractor::Asset::pre_save
+
+tags:
+    function:
+        AssetSexyBackgroundColor: $SexyColorExtractor::SexyColorExtractor::Template::asset_sexy_background_color
+        AssetSexyTextMainColor: $SexyColorExtractor::SexyColorExtractor::Template::asset_sexy_text_main_color
+        AssetSexyTextSubColor: $SexyColorExtractor::SexyColorExtractor::Template::asset_sexy_text_sub_color
