@@ -1,6 +1,6 @@
 # SexyColorExtractor
 
-This plugin enables the Movable Type to Extract sexy colors from images.
+This plugin enables the Movable Type to extract sexy colors from images.
 
 
 ## Features

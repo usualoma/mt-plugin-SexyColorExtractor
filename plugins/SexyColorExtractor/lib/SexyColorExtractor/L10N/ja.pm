@@ -10,7 +10,7 @@ use vars qw( %Lexicon );
     'ToI Inc.' => '株式会社ToI企画',
     'Keybind'  => 'キーバインド',
     'Extract sexy colors from images' =>
-        '画像からオシャレっぽい色を抜き出します',
+        '画像からお洒落っぽい色を抜き出します',
 );
 
 1;
