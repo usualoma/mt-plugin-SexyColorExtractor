@@ -19,8 +19,14 @@ function sexycolorextractor_color($prefix, $args, &$ctx) {
         : $config['default_format'] )
         : $args['format'];
 
-    $k = $prefix . '_' . $map;
-    $color = explode(',', $asset->$k);
+    $key   = $prefix . '_' . $map;
+    $value = $asset->$key;
+
+    if (empty($value)) {
+        return '';
+    }
+
+    $color = explode(',', $value);
 
     return call_user_func_array('sprintf', array_merge(array($format), $color));
 }
