@@ -35,9 +35,9 @@ background: linear-gradient(to right, <mt:Var name="gradient_values" />);
 </mt:SetVarTemplate>
 
 <mt:Assets>
-<div style="color: <mt:AssetSexyTextMainColor />; text-shadow: 0 1px 3px <mt:If tag="AssetSexyTextMainColor" map="HSV" format="%3$d" lt="128">white<mt:Else>black</mt:If>; background-color: <mt:AssetSexyBackgroundColor />; float: left; width: 100%;">
+<div style="color: <mt:AssetSexyTextMainColor />; text-shadow: 0 1px 0 <mt:If tag="AssetSexyTextMainColor" map="HSV" format="%3$d" lt="128">rgba(255,255,255,0.4)<mt:Else>rgba(0,0,0,0.4)</mt:If>; background-color: <mt:AssetSexyBackgroundColor />; float: left; width: 100%;">
 <div style="font-weight: bold; font-size: 120%; padding: 10px;"><mt:AssetLabel /></div>
-<div style="color: <mt:AssetSexyTextSubColor />; text-shadow: 0 1px 3px <mt:If tag="AssetSexyTextSubColor" map="HSV" format="%3$d" lt="128">white<mt:Else>black</mt:If>; width: 500px; padding: 10px; float: left">
+<div style="color: <mt:AssetSexyTextSubColor />; text-shadow: 0 1px 0 <mt:If tag="AssetSexyTextSubColor" map="HSV" format="%3$d" lt="128">rgba(255,255,255,0.4)<mt:Else>rgba(0,0,0,0.4)</mt:If>; width: 500px; padding: 10px; float: left">
 <mt:AssetDescription />
 </div>
 
