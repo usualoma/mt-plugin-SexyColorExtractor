@@ -74,8 +74,10 @@ background: linear-gradient(to right, <mt:Var name="gradient_values" />);
 
 ## Requirements
 
-* Movable Type 5 or any later version (tested only under MT5.2.)
+* Movable Type 5 or any later version
+  * tested only under MT5.2.
 * ImageMagick
+  * A "ImageDriver" config directive should be "ImageMagick" that is default value.
 
 
 ## Installation
