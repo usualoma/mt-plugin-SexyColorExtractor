@@ -68,7 +68,8 @@ background: linear-gradient(to right, <mt:Var name="gradient_values" />);
 ## Supported publishing methods
 
 * Static publishing
-* (Dynamic publishing is coming soon)
+* Dynamic publishing (for images uploaded after this plug-in will be installed)
+  * In dynamic publishing, we should escape if "$" is used. (e.g. format="%3\$d")
 
 
 ## Requirements
